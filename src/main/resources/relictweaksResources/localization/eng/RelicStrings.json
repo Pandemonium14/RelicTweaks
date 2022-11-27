@@ -1,0 +1,32 @@
+{
+  "Cauldron": {
+    "NAME": "Cauldron",
+    "FLAVOR": "The Merchant is actually a rather skilled potion brewer. Buy 4 get 1 free.",
+    "DESCRIPTIONS": [
+      "Upon pickup, gain #b1 Potion Slot and find #b5 random potions.",
+      "Blup blip bloop...!"
+    ]
+  },
+  "Juzu Bracelet": {
+    "NAME": "Juzu Bracelet",
+    "FLAVOR": "A ward against the unknown.",
+    "DESCRIPTIONS": [
+      "Normal enemy combats are no longer encountered in #y? rooms. Heal #b4 HP when entering an event."
+    ]
+  },
+  "relictweaks:Darkstone Periapt": {
+    "NAME": "Darkstone Periapt",
+    "FLAVOR": "The stone draws power from dark energy, converting it into vitality for the wearer.",
+    "DESCRIPTIONS": [
+      "At the start of combat, move the #rCurse cards in your draw pile to your discard pile."
+    ]
+  },
+  "relictweaks:Blue Candle": {
+    "NAME": "Blue Candle",
+    "FLAVOR": "The flame ignites when shrouded in darkness.",
+    "DESCRIPTIONS": [
+      "You can now play #rCurses. When you do, lose #b1 HP and #yExhaust it. NL At the end of your turn, deal 1 damage to all enemies for every #rCurse in your exhaust pile.",
+      "this should never show up"
+    ]
+  }
+}
