@@ -2,6 +2,7 @@ package RelicTweaks;
 
 import RelicTweaks.relics.TweakedBlueCandle;
 import RelicTweaks.relics.TweakedDarkstonePeriapt;
+import RelicTweaks.relics.TweakedNilrysCodex;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import basemod.helpers.RelicType;
@@ -12,10 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.map.MapRoomNode;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.BlueCandle;
-import com.megacrit.cardcrawl.relics.DarkstonePeriapt;
-import com.megacrit.cardcrawl.relics.JuzuBracelet;
+import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 import sun.security.provider.SHA;
 
@@ -27,6 +25,8 @@ import java.util.HashMap;
 public class RelicTweaksMod implements PostInitializeSubscriber, EditStringsSubscriber, EditRelicsSubscriber  {
 
     public static final String modID = "relictweaks"; //TODO: Change this.
+
+    public static final ArrayList<String> relicsToRemove = getRelicsToRemove();
 
     public static String makeID(String idText) {
         return modID + ":" + idText;
@@ -48,6 +48,14 @@ public class RelicTweaksMod implements PostInitializeSubscriber, EditStringsSubs
         RelicTweaksMod thismod = new RelicTweaksMod();
     }
 
+    private static ArrayList<String> getRelicsToRemove() {
+        ArrayList<String> result = new ArrayList<>();
+        result.add(DarkstonePeriapt.ID);
+        result.add(BlueCandle.ID);
+        result.add(NilrysCodex.ID);
+        return result;
+    }
+
     @Override
     public void receivePostInitialize() {
 
@@ -55,6 +63,7 @@ public class RelicTweaksMod implements PostInitializeSubscriber, EditStringsSubs
 
         removeRelic(new DarkstonePeriapt());
         removeRelic(new BlueCandle());
+        removeRelic(new NilrysCodex());
     }
 
 
@@ -68,7 +77,7 @@ public class RelicTweaksMod implements PostInitializeSubscriber, EditStringsSubs
 
         BaseMod.addRelic(new TweakedDarkstonePeriapt(), RelicType.SHARED);
         BaseMod.addRelic(new TweakedBlueCandle(), RelicType.SHARED);
-
+        BaseMod.addRelic(new TweakedNilrysCodex(), RelicType.SHARED);
 
     }
 
@@ -79,7 +88,7 @@ public class RelicTweaksMod implements PostInitializeSubscriber, EditStringsSubs
         for (AbstractRelic relic : AbstractDungeon.player.relics) {
             if ("?".equals(node.getRoomSymbol(true)))
             if (relic instanceof JuzuBracelet) {
-                AbstractDungeon.effectsQueue.add(new HealEffect(relic.currentX, relic.currentY, 2));
+                AbstractDungeon.player.heal(4, true);
             }
         }
     }
@@ -88,30 +97,6 @@ public class RelicTweaksMod implements PostInitializeSubscriber, EditStringsSubs
         //from functional hashmap
         BaseMod.removeRelic(relic);
 
-        //from Compendium lists (doesn't work yet)
-        switch (relic.tier) {
-            case COMMON:
-                ArrayList<AbstractRelic> listC = RelicLibrary.commonList;
-                listC.remove(relic);
-                break;
-            case UNCOMMON:
-                BaseMod.logger.info("Removing an uncommon relic???.???????????");
-                ArrayList<AbstractRelic> listU = RelicLibrary.uncommonList;
-                listU.remove(relic);
-                break;
-            case RARE:
-                ArrayList<AbstractRelic> listR = RelicLibrary.rareList;
-                listR.remove(relic);
-                break;
-            case SHOP:
-                ArrayList<AbstractRelic> listSh = RelicLibrary.shopList;
-                listSh.remove(relic);
-                break;
-            case SPECIAL:
-                ArrayList<AbstractRelic> listSp = RelicLibrary.specialList;
-                listSp.remove(relic);
-                break;
-        }
     }
 
 }

@@ -28,5 +28,19 @@
       "You can now play #rCurses. When you do, lose #b1 HP and #yExhaust it. NL At the end of your turn, deal 1 damage to all enemies for every #rCurse in your exhaust pile.",
       "this should never show up"
     ]
+  },
+  "relictweaks:Nilry's Codex": {
+    "NAME": "Nilry's Codex",
+    "FLAVOR": "Crafted by the infamous game master himself. Said to expand one's mind.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add a random #yUpgraded card to your hand. It is #yEthereal and #yExhausts."
+    ]
+  },
+  "Dream Catcher": {
+    "NAME": "Dream Catcher",
+    "FLAVOR": "The northern tribes would often use dream catchers at night, believing they led to self improvement.",
+    "DESCRIPTIONS": [
+      "Whenever you #yRest, you may add an #yUpgraded card into your deck."
+    ]
   }
 }
