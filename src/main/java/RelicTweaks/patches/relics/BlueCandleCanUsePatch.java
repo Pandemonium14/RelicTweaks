@@ -1,6 +1,7 @@
 package RelicTweaks.patches.relics;
 
 
+import RelicTweaks.RelicTweaksMod;
 import RelicTweaks.relics.TweakedBlueCandle;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;

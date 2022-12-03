@@ -1,6 +1,7 @@
 package RelicTweaks.patches.relics;
 
 
+import RelicTweaks.RelicTweaksMod;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
@@ -14,7 +15,7 @@ public class MatryoshkaPatch {
 
     @SpirePrefixPatch
     public static SpireReturn tweak(AbstractRelic __instance, boolean bossChest) {
-
+        if (!RelicTweaksMod.getConfigForKey("Matryoshka")) return SpireReturn.Continue();
         if (!bossChest && __instance.counter > 0) {// 22 23
             --__instance.counter;// 24
             __instance.flash();// 26

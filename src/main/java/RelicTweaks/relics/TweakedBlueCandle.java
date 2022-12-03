@@ -2,6 +2,7 @@ package RelicTweaks.relics;
 
 import RelicTweaks.RelicTweaksMod;
 import RelicTweaks.actions.BlueCandleAction;
+import com.evacipated.cardcrawl.mod.stslib.relics.CardRewardSkipButtonRelic;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -39,4 +40,5 @@ public class TweakedBlueCandle extends AbstractRelic {
     public void onPlayerEndTurn() {
         addToBot(new BlueCandleAction());
     }
+
 }

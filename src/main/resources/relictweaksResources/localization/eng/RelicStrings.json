@@ -42,5 +42,61 @@
     "DESCRIPTIONS": [
       "Whenever you #yRest, you may add an #yUpgraded card into your deck."
     ]
+  },
+  "StrikeDummy": {
+    "NAME": "Strike Dummy",
+    "FLAVOR": "It's beat up.",
+    "DESCRIPTIONS": [
+      "Cards containing \"Strike\" and common Attacks deal #b",
+      " additional damage."
+    ]
+  },
+  "relictweaks:Ceramic Fish": {
+    "NAME": "Ceramic Fish",
+    "FLAVOR": "Meticulously painted, these fish were revered to bring great fortune.",
+    "DESCRIPTIONS": [
+      "When adding cards into your deck, you may gain #b",
+      " #yGold instead.",
+      "+9 Gold"
+    ]
+  },
+  "Strange Spoon": {
+    "NAME": "Strange Spoon",
+    "FLAVOR": "Staring at the spoon, it appears to bend and twist around before your eyes.",
+    "DESCRIPTIONS": [
+    "The first two cards played each combat which #yExhaust when played will instead discard."
+    ]
+  },
+  "The Specimen": {
+    "NAME": "The Specimen",
+    "FLAVOR": "\"Fascinating! I found a mutated creature demonstrating astounding toxic properties. Storing a sample for later examination.\" - Ranwid",
+    "DESCRIPTIONS": [
+      "Whenever an enemy dies, apply #b6 #yPoison to ALL enemies."
+    ]
+  },
+  "relictweaks:HandDrill": {
+    "NAME": "Hand Drill",
+    "FLAVOR": "\"Spirals are dangerous.\"",
+    "DESCRIPTIONS": [
+      "Your attacks deal #b50% more damage to enemies with #yBlock."
+    ]
+  },
+  "Tiny Chest": {
+    "NAME": "Tiny Chest",
+    "FLAVOR": "\"A fine prototype.\" - The Architect",
+    "DESCRIPTIONS": [
+      "Every #b",
+      "th #y? room is a #yTreasure room with a large chest.",
+      ""
+    ]
+  },
+  "MawBank": {
+    "NAME": "Maw Bank",
+    "FLAVOR": "Surprisingly popular, despite maw attacks being a regular occurrence.",
+    "DESCRIPTIONS": [
+      "Whenever you climb a floor, gain #b",
+      " #yGold. After you spend #yGold at a shop, if you have less #yGold than the total #yGold gained from this relic, it breaks.",
+      "This relic has been used up."
+    ]
   }
 }

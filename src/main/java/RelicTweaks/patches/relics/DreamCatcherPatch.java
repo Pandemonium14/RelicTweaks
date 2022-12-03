@@ -1,6 +1,7 @@
 package RelicTweaks.patches.relics;
 
 
+import RelicTweaks.RelicTweaksMod;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -26,6 +27,7 @@ public class DreamCatcherPatch {
 
     @SpireInsertPatch(locator = Locator.class, localvars = {"rewardCards"})
     public static void tweakDreamCatcher(CampfireSleepEffect __instance, ArrayList<AbstractCard> rewardCards) {
+        if (!RelicTweaksMod.getConfigForKey("Dream Catcher")) return;
         for (AbstractCard c : rewardCards) {
             c.upgrade();
         }

@@ -1,5 +1,6 @@
 package RelicTweaks.patches.relics;
 
+import RelicTweaks.RelicTweaksMod;
 import RelicTweaks.relics.TweakedNilrysCodex;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
@@ -35,6 +36,7 @@ public class CursedTomePatch {
     }
     @SpireInsertPatch(locator = Locator.class, localvars = {"possibleBooks"})
     public static void tweakNilry(CursedTome __instance, ArrayList<AbstractRelic> possibleBooks) {
+        if (!RelicTweaksMod.getConfigForKey("Nilry's Codex")) return;
         AbstractRelic nilry = null;
         AbstractRelic circlet = null;
         for (AbstractRelic r : possibleBooks) {
